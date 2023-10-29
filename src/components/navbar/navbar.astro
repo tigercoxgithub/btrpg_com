@@ -3,33 +3,32 @@ import Container from "../container.astro";
 import Link from "../ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import { Logo } from "../ui/icons";
 
 const menuitems = [
-  {
-    title: "Features",
-    path: "#",
-    children: [
-      { title: "Action", path: "/" },
-      { title: "Another action", path: "#" },
-      { title: "Dropdown Submenu", path: "#" },
-      { title: "404 Page", path: "/404" },
-    ],
+{
+    title: "Overview",
+    path: "/",
   },
-  {
-    title: "Pricing",
+{
+    title: "2024 Calendar",
+    path: "/calendar",
+  },  
+ {
+    title: "Reviews",
     path: "/pricing",
   },
   {
-    title: "About",
-    path: "/about",
-  },
-  {
-    title: "Blog",
+    title: "News",
     path: "/blog",
   },
   {
+    title: "Team",
+    path: "/about",
+  },
+  {
     title: "Contact",
-    path: "/contact",
+    path: "/register",
   },
 ];
 ---
@@ -38,10 +37,13 @@ const menuitems = [
   <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">Astro</span><span
-            class="text-slate-500">ship</span
-          >
+        <a href="/" class="text-lg"> 
+          <div class="flex items-center">
+          <Logo class="w-20 h-20" />
+          <span class="font-bold text-slate-800">Beyond</span>
+          <span class="text-slate-500">the</span>
+          <span class="font-bold text-slate-800">Ridge</span>
+        </div>
         </a>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800" />
@@ -74,15 +76,15 @@ const menuitems = [
           }
         </ul>
         <div class="lg:hidden flex items-center mt-3 gap-4">
-          <Link href="#" style="muted" block size="md">Log in</Link>
-          <Link href="#" size="md" block>Sign up</Link>
+          <Link href="/login" style="muted" block size="md">Log in</Link>
+          <Link href="/register" size="md" block style="register" >Register to join us!</Link>
         </div>
       </MenuItems>
     </Astronav>
     <div>
       <div class="hidden lg:flex items-center gap-4">
-        <a href="#">Log in</a>
-        <Link href="#" size="md">Sign up</Link>
+        <a href="/login">Log in</a>
+        <Link href="/register" size="md" style="register">Register to join us!</Link>
       </div>
     </div>
   </header>

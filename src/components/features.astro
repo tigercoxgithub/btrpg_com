@@ -1,70 +1,229 @@
 ---
 // @ts-ignore
 //import { Icon } from "astro-icon";
+import Link from "./ui/link.astro";
+import { Eagle, Mountain, Suncloud, Rocket } from "../components/ui/icons";
 
 const features = [
   {
-    title: "Bring Your Own Framework",
+    icon: {component: Mountain},
+    title: "1. Intro to Mountains",
     description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
+      "To go from the small grassy slopes of England to the jagged mountains, with their valley winds and katabatic flows, requires a whole new knowledge base. Register for Full Trip 1 Details >",
    
   },
   {
-    title: "100% Static HTML, No JS",
+    icon: {component: Suncloud},
+    title: "2. Intro to Thermalling",
     description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
+      "To gain height in warm rising air and stay high, possibly near the base of the clouds, is a skill with such huge rewards it makes paragliding utterly addictive. Register for Full Trip 2 Details > ",
    
   },
   {
-    title: "On-Demand Components",
+    icon: {component: Eagle},
+    title: "3. Intro to XC",
     description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
+      "Combining your mountain knowledge with your thermalling ability to drift downwind with your buddies and land out in the unknown. It's 'sky chess multiplayer', the next big dopamine hit after learning thermal. Register for Full Trip 3 Details >",
    
   },
   {
-    title: "Broad Integration",
+    icon: {component: Rocket},
+    title: "4. XC Core",
     description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
+      "This one is for pilots who have been flying for a few years and are looking to cover some ground. It’s not just about the distance number, it’s making the most of the conditions you are dealt. Register for Full Trip 4 Details >",
     
   },
+];
+
+const reviews = [
   {
-    title: "SEO Enabled",
+    icon: {component: Mountain},
+    title: "Henry I.",
     description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
+      "Laragne was my first paragliding trip out of school, and I only had a couple of hours under my belt. I had so much fun! It’s a great way to increase your hours, and by the end of the week I’d hit my first big (>1km up) thermals! Rich, Amy and Tiger were fantastic. It’s a fantastic bridge from the structured school environment to flying by yourself.",
    
   },
   {
-    title: "Community",
+    icon: {component: Suncloud},
+    title: "Coco C.",
     description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-  
+      "Laragne was a fantastic introduction to thermalling, after which I could dive into the summer conditions with more confidence, safety and understanding. The amazing team easily understood my way of learning, with a focus on practice, but always backed with the right amount of theory, either in the weather briefings or individual remarks and encouragements. The great variety of sites was extremely helpful for developing my take-off and landing skills. My personal highlight was the beautiful flights in Saint-Vincent-les-Forts, a buoyant day with a fantastic view!",
+   
+  },
+  {
+    icon: {component: Eagle},
+    title: "Jim D.",
+    description:
+      "Next week I will be on my 3rd trip with Richard to Larangne with a 4th booked for next June. I met Richard Amy and Tiger during training with Fly Sussex and every trip has been like a week away with old friends. Richard really cares about safety and his knowledge of the area is incredible. I love Amy's enthusiasm which really rubs off on everyone. Last trip I had Tigers gentle voice pop into my headphones saying you love an adventure Jim follow me and we followed a dried up river bed for a few km my first XC. Dave and Rachel are the best hosts and morning briefing is always fun and concise. Thanks everyone!",
+   
+  },
+  {
+    icon: {component: Rocket},
+    title: "Audie W.",
+    description:
+      "",
+    
   },
 ];
 ---
 
-<div class="mt-16 md:mt-0">
-  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need to start a website
+<div class="mt-16 md:mt-0 ">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight items-center text-center">
+    Master the sky with us...
   </h2>
-  <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
-  </p>
+
+  <div
+  class="bg-slate p-8 md:px-20 md:py-20 mt-20 mx-auto max-w-5xl rounded-lg flex flex-col  border border-black">
+  <h2 class="text-black text-4xl md:text-6xl tracking-tight items-center text-center">
+    Step 1: Join our meetup.
+  </h2>
+  <p class="text-black-400 mt-4 text-lg md:text-xl  text-left">
+    You are not alone on this crazy paragliding journey. As a Beyond The Ridge Member, <wbr> 
+    you'll have direct access to a fun, positive community of fellow pilots all with <wbr>
+    a clear singular vision <b> - to fly beyond the ridge! </b> <br>
+    <br>
+    </p>
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 flex">
+      <div class="flex">
+        <div>
+          <div class="flex items-center">
+            <div class="flex items-center">
+              <div class="mt-1 rounded-full  p-2 w-10 h-10 shrink-0 border border-slate border-dotted">   
+                <Suncloud class="w-8 h-8"/>
+              </div>
+              <p class="text-black">
+                Live calls online once a month.
+                </p>
+            </div>
+          </div>
+  
+         <div class="flex items-center">
+            <div class="flex items-center">
+              <div class="mt-1 rounded-full  p-2 w-10 h-10 shrink-0 border border-slate border-dotted">   
+                <Suncloud class="w-8 h-8"/>
+              </div>
+              <p class="text-black">
+                In person Ground Handling workshops.
+               </p>
+            </div>
+          </div>
+  
+          <div class="flex items-center">
+            <div class="flex items-center">
+              <div class="mt-1 rounded-full  p-2 w-10 h-10 shrink-0 border border-slate border-dotted">   
+                <Suncloud class="w-8 h-8"/>
+              </div>
+              <p class="text-black">
+                Weather tips for home sites.
+                </p>
+            </div>
+          </div>
+
+          <div class="flex items-center">
+            <div class="flex items-center">
+              <div class="mt-1 rounded-full  p-2 w-10 h-10 shrink-0 border border-slate border-dotted">   
+                <Suncloud class="w-8 h-8"/>
+              </div>
+              <p class="text-black">
+                Pre trip briefings.
+                </p>
+            </div>
+          </div>
+
+          <div class="flex items-center">
+            <div class="flex items-center">
+              <div class="mt-1 rounded-full  p-2 w-10 h-10 shrink-0 border border-slate border-dotted">   
+                <Suncloud class="w-8 h-8"/>
+              </div>
+              <p class="text-black">
+                Kit checks.
+                </p>
+            </div>
+          </div>
+  
+      </div>
+      </div>
+      <div class="bg-gray-300 p-4 flex">
+        <!-- Content for the second column -->
+      </div>
+    </div>
+
+    <div class="items-center text-center">
+      <Link href="#" > View Dates</Link>
+    </div>
+    
 </div>
 
-<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
-  {
-    features.map((item) => (
-      <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-         
-          
+<div
+  class="bg-slate p-8 md:px-20 md:py-20 mt-20 mx-auto max-w-7xl rounded-lg flex flex-col items-center ">
+  <h2 class="text-black text-4xl md:text-6xl tracking-tight">
+    Step  2: Group Trips Abroad.
+  </h2>
+  <p class="text-black-400 mt-4 text-lg md:text-xl  text-left">
+    Advancement in this sport requires stepping stones, not giant leaps. You have completed the first stepping stone: BHPA Club Pilot rating  (one of our requirements). <wbr>
+    Now it's time to learn about the mountains, thermalling, and XC - in that order! <wbr>
+  </p>
+
+  <div class="grid sm:grid-cols-2 md:grid-cols-2 mt-16 gap-16">
+    {
+      features.map((item) => (
+        <div class="flex gap-4 items-start">
+          <div class="mt-1 rounded-full  p-2 w-16 h-16 shrink-0 border border-slate border-dotted">   
+            <item.icon.component class="w-12 h-12"/>
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+            <p class="text-black-500 mt-2 leading-relaxed">{item.description}</p>
+          </div>
         </div>
-        <div>
-          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-        </div>
-      </div>
-    ))
-  }
+      ))
+    }
+  </div>
+
+  <div class="flex mt-5">
+    <Link href="#" > View Dates</Link>
+  </div>
 </div>
+
+<div class="mt-16 md:mt-0 items-center text-center">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight items-center text-center">
+    What other members say...
+  </h2>
+
+  <div class="grid sm:grid-cols-2 md:grid-cols-2 mt-16 gap-16">
+    {
+      reviews.map((item) => (
+        <div class="flex gap-4 items-start border border-black items-center text-left p-4">
+          <div class="mt-1 rounded-full  p-2 w-16 h-16 shrink-0 border border-slate border-dotted">   
+            <item.icon.component class="w-12 h-12"/>
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+            <blockquote class="text-black-500 mt-2 leading-relaxed italic ">"{item.description}"</blockquote>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+
+</div>
+
+<div
+  class="bg-slate p-8 md:px-20 md:py-20 mt-20 mx-auto max-w-7xl rounded-lg flex flex-col items-center ">
+  <h2 class="text-black text-4xl md:text-6xl tracking-tight">
+    Who are we?
+  </h2>
+  <p class="text-black-400 mt-4 text-lg md:text-xl  text-left">
+    Think of us as a club or community. The 'elders' of our club are very experienced pilots, you can meet the team <b>here</b>.<br>
+    We are not a school, we do not teach you. What we do is help you put yourself in the right place, at the right  time, with the right people, <wbr>
+    so that you can keep yourself safe in the air. <br>
+    <br>
+    Your adventure beyond the ridge starts when you...
+  </p>
+  <div class="flex mt-5">
+    <Link href="#" size="lg" style="register"> Register to join us </Link>
+  </div>
+  </div>
+
+
+

@@ -1,0 +1,6 @@
+[[ d1_databases ]]
+binding = "BTRPG_DATA"
+database_name = "btrpg-database" 
+database_id = "5b7eee1b-f53d-43b8-9159-7991afd0c9d9"
+preview_database_id = "btrpg-database" 
+migrations_dir = ".d1/migrations"

@@ -21,5 +21,5 @@ pnpm-debug.log*
 .DS_Store
 
 #tiger added
-wrangler.toml
-d1/
+.d1/
+.wrangler/
